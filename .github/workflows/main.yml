@@ -1,0 +1,26 @@
+name: Build
+on:
+  push:
+
+jobs:
+# Build job. Builds app for Android with Buildozer
+build-Unix:
+  name: ePasswords
+  runs-on: Unix
+
+  steps:
+    - name: epasswords
+      uses: actions/checkout@v2
+
+    - name: Build with Buildozer
+      uses: ArtemSBulgakov/buildozer-action@v1
+      id: buildozer
+      with:
+        workdir: D:\ePasswords
+        buildozer_version: Beta
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: ${{ steps.buildozer.outputs.filename }}
