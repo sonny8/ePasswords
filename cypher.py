@@ -1,0 +1,67 @@
+print("Hi, Welcome to ePin!")
+
+def main():
+    pin1 = input("Enter the first number of your PIN: ")
+    pin2 = input("Enter the seccond number of your PIN: ")
+    pin3 = input("Enter the third number of your PIN: ")
+    pin4 = input("Enter the forth number of your PIN: ")
+    key = input("Enter your encription key: ")
+    print("Press Enter to confirm")
+    input("")
+    print("Encrypting...")
+    fpin = pin1 + pin2 +pin3 +pin4
+    import time
+    print(fpin)
+
+
+    print("Converting str to int...")
+    time.sleep(0.1)
+    pin1 = int(pin1)
+    pin2 = int(pin2)
+    pin3 = int(pin3)
+    pin4 = int(pin4)
+    key = int(key)
+
+
+
+    print("Done.")
+    print("Objective 1: pin value #1...")
+    print(pin1)
+    time.sleep(0.1)
+    pin1 = (pin1 + key)
+    print(pin1)
+    print("Done.")
+    print("Objective 2: pin value #2...")
+    print(pin2)
+    time.sleep(0.1)
+    pin2 = (pin2 + key)
+    print(pin2)
+    print("Done.")
+    print("Objective 3: pin value #3...")
+    print(pin3)
+    time.sleep(0.1)
+    pin3 = (pin3 + key)
+    print(pin3)
+    print("Done.")
+    print("Objective 4: pin value #4...")
+    print(pin4)
+    time.sleep(0.1)
+    pin4 = (pin4 + key)
+    print(pin4)
+    print("Done.")
+    print("Your Encripted PIN: ")
+    pin1 = str(pin1)
+    pin2 = str(pin2)
+    pin3 = str(pin3)
+    pin4 = str(pin4)
+
+    final = pin1 + pin2 + pin3 + pin4
+    print(final)
+    print("Your encryption key:")
+    print(key)
+    print("Your Indivdual encrypted #s")
+    print(pin1)
+    print(pin2)
+    print(pin3)
+    print(pin4)
+
